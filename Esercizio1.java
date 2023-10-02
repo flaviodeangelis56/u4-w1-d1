@@ -4,15 +4,46 @@ public class Esercizio1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Inserisci il primo fattore e premi invio");
-        int fattore1 = input.nextInt();
+        int fattore1 = Integer.parseInt(input.nextLine());
         System.out.println("Inserisci il secondo fattore e premi invio");
-        int fattore2 = input.nextInt();
-        System.out.println("Il prodotto è : " + product(fattore1, fattore2));
+        int fattore2 = Integer.parseInt(input.nextLine());
+        System.out.println("Il prodotto è : " + Moltiplica(fattore1, fattore2));
+
+        System.out.println("Inserisci una stringa e premi invio");
+        String stringaConcatena = input.nextLine();
+        System.out.println("Inserisci un numero e premi invio");
+        int numero = Integer.parseInt(input.nextLine());
+        System.out.println("Elementi concatenati : " + Concatena(stringaConcatena, numero));
+
+        String[] arrayDiStringhe = {"stringa1", "stringa2", "stringa3", "stringa4", "stringa5"};
+        String stringaAggiungiArray = input.nextLine();
+        String[] finalArray = InserisciInArray(arrayDiStringhe, stringaAggiungiArray);
+        for (int i = 0; i < finalArray.length; i++) {
+            System.out.println("Array con stringa aggiunta : ");
+            System.out.println(finalArray[i]);
+        }
+
         input.close();
+
 
     }
 
-    public static int product(int n1, int n2) {
+    public static int Moltiplica(int n1, int n2) {
         return n1 * n2;
+    }
+
+    public static String Concatena(String str, int num) {
+        return str + " " + num;
+    }
+
+    public static String[] InserisciInArray(String[] arrayStr, String str) {
+        String[] finalArray = new String[6];
+        finalArray[0] = "stringa1";
+        finalArray[1] = "stringa2";
+        finalArray[2] = str;
+        finalArray[3] = "stringa3";
+        finalArray[4] = "stringa4";
+        finalArray[5] = "stringa5";
+        return finalArray;
     }
 }
