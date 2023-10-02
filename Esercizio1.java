@@ -16,6 +16,7 @@ public class Esercizio1 {
         System.out.println("Elementi concatenati : " + Concatena(stringaConcatena, numero));
 
         String[] arrayDiStringhe = {"stringa1", "stringa2", "stringa3", "stringa4", "stringa5"};
+        System.out.println("Inserisci una stringa da inserire nella terza posizione dell'array e premi invio");
         String stringaAggiungiArray = input.nextLine();
         String[] finalArray = InserisciInArray(arrayDiStringhe, stringaAggiungiArray);
         for (int i = 0; i < finalArray.length; i++) {
@@ -38,12 +39,12 @@ public class Esercizio1 {
 
     public static String[] InserisciInArray(String[] arrayStr, String str) {
         String[] finalArray = new String[6];
-        finalArray[0] = "stringa1";
-        finalArray[1] = "stringa2";
+        finalArray[0] = arrayStr[0];
+        finalArray[1] = arrayStr[1];
         finalArray[2] = str;
-        finalArray[3] = "stringa3";
-        finalArray[4] = "stringa4";
-        finalArray[5] = "stringa5";
+        finalArray[3] = arrayStr[2];
+        finalArray[4] = arrayStr[3];
+        finalArray[5] = arrayStr[4];
         return finalArray;
     }
 }
